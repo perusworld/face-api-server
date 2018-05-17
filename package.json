@@ -1,7 +1,7 @@
 {
-  "name": "node-ts-express-base",
-  "version": "3.0.2",
-  "description": "Node.js TypeScript Express - Base",
+  "name": "face-api-server",
+  "version": "1.0.0",
+  "description": "Simple Face API Server, with options to switch to any backend in the future",
   "scripts": {
     "test": "jest",
     "build": "node ./node_modules/typescript/bin/tsc",
@@ -26,22 +26,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/perusworld/node-ts-express-base.git"
+    "url": "git://github.com/perusworld/face-api-server.git"
   },
   "keywords": [
     "nodejs",
     "typescript",
     "module"
   ],
-  "engines": {
-    "node": "8.1.4"
-  },
   "author": "Saravana Perumal Shanmugam <saravanaperumal@msn.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/perusworld/node-ts-express-base/issues"
+    "url": "https://github.com/perusworld/face-api-server/issues"
   },
-  "homepage": "https://github.com/perusworld/node-ts-express-base",
+  "homepage": "https://github.com/perusworld/face-api-server",
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
     "@types/express": "^4.11.1",
@@ -57,6 +54,7 @@
     "body-parser": "^1.18.3",
     "color-convert": "^1.9.1",
     "express": "^4.16.3",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "ts-azure-cognitiveservices-face-api": "github:perusworld/ts-azure-cognitiveservices-face-api"
   }
 }

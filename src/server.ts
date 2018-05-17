@@ -86,6 +86,9 @@ export class Server {
     this.app.set("views", path.join(__dirname, "../views"));
     this.app.set("view engine", "pug");
 
+    //mount raw body parser
+    this.app.use(bodyParser.raw({ limit: '1mb' }));
+
     //mount json form parser
     this.app.use(bodyParser.json());
 
@@ -97,8 +100,11 @@ export class Server {
 
     // catch 404 and forward to error handler
     this.app.use(function (err: any, req: express.Request, res: express.Response, next: express.NextFunction) {
-      err.status = 404;
-      next(err);
+      console.log(err);
+      res.json({
+        failed: true,
+        message: (err && err.message) ? err.message : ""
+      });
     });
 
   }
